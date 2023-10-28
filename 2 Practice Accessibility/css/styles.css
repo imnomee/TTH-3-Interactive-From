@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IM Fell Great Primer SC', serif;
+}
+
+input,
+select,
+textarea,
+button,
+fieldset,
+legend {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/castle.webp) no-repeat center center / cover;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(18px);
+  color: #333;
+  box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+header h1 {
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+  color: #fff;
+  font-size: 20px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.25), 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  padding: 20px 10px;
+}
+
+form,
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+fieldset {
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+fieldset+fieldset {
+  margin-top: 25px;
+}
+
+.heroes {
+  color: #fff;
+  background-image: linear-gradient(90deg, rgba(189, 162, 66, 0.90) 0%, rgba(255, 255, 255, 0.90) 100%);
+}
+
+.enemies {
+  color: #dedede;
+  background-image: linear-gradient(90deg, rgba(162, 42, 56, 0.85) 0%, rgba(17, 17, 17, 0.85) 100%);
+}
+
+legend {
+  display: none;
+}
+
+label {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  font-size: 18px;
+  margin: 5px 0;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.25), 1px 1px 1px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 6px;
+  border-radius: 10px;
+  /* transition: 0.8s all linear; */
+}
+
+label img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  /* transition: 0.8s all linear; */
+}
+
+.heroes label.focus {
+  background-color: rgba(189, 162, 66, 1);
+}
+
+.enemies label.focus {
+  background-color: rgba(162, 42, 56, 1);
+}
+
+input[type="checkbox"].focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.heroes img {
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.9);
+}
+
+.enemies img {
+  box-shadow: 0px 0px 5px 0px rgba(162, 42, 56, 0.85);
+}
+
+.disabled img {
+  filter: grayscale(100%) brightness(30%);
+  box-shadow: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  margin-right: 10px;
+  transition: outline-offset 0.3s ease-in-out;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.heroes input[type="checkbox"] {
+  background-color: rgba(189, 162, 66, 0.90);
+}
+
+.enemies input[type="checkbox"] {
+  background-color: rgba(162, 42, 56, 0.85);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform linear;
+  box-shadow: inset 1em 1em #fff;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:disabled {
+  color: #333;
+  background-color: #333;
+  border-color: #333;
+  cursor: not-allowed;
+}
+
+label:has(input[type="checkbox"]:disabled) {
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.05);
+  text-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+label:has(input[type="checkbox"]:disabled) img {
+  filter: grayscale(100%) brightness(30%);
+  box-shadow: none;
+}
+
+
+@media (min-width: 768px) {
+  form {
+    flex-direction: row;
+    padding: 25px;
+  }
+
+  fieldset+fieldset {
+    margin-top: 0;
+    margin-left: 25px;
+  }
+}

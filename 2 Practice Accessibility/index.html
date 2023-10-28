@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap"
+        rel="stylesheet">
+  <title>Fantasy Adventure Quest</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Fantasy Adventure Quest</h1>
+      <p>Choose your heroes and target enemies</p>
+    </header>
+    <form>
+      <fieldset class="heroes">
+        <legend>Hero Classes</legend>
+        <h2 aria-hidden="true">Hero Classes</h2>
+        <label for="warrior">
+          <img src="./images/warrior.webp" alt="warrior">
+          <input type="checkbox" data-combat-style="hero-melee" id="warrior">
+          Warrior
+        </label>
+        <label for="mage">
+          <img src="./images/mage.webp" alt="mage">
+          <input type="checkbox" data-combat-style="hero-ranged" id="mage">
+          Mage
+        </label>
+        <label for="archer">
+          <img src="./images/archer.webp" alt="archer">
+          <input type="checkbox" data-combat-style="hero-ranged" id="archer">
+          Archer
+        </label>
+        <label for="thief">
+          <img src="./images/thief.webp" alt="thief">
+          <input type="checkbox" data-combat-style="hero-melee" id="thief">
+          Thief
+        </label>
+        <label for="alchemist">
+          <img src="./images/alchemist.webp" alt="alchemist">
+          <input type="checkbox" data-combat-style="hero-ranged" id="alchemist">
+          Alchemist
+        </label>
+        <label for="bard">
+          <img src="./images/bard.webp" alt="bard">
+          <input type="checkbox" data-combat-style="hero-ranged" id="bard">
+          Bard
+        </label>
+        <label for="paladin">
+          <img src="./images/paladin.webp" alt="paladin">
+          <input type="checkbox" data-combat-style="hero-melee" id="paladin">
+          Paladin
+        </label>
+        <label for="druid">
+          <img src="./images/druid.webp" alt="druid">
+          <input type="checkbox" data-combat-style="hero-ranged" id="druid">
+          Druid
+        </label>
+      </fieldset>
+
+      <fieldset class="enemies">
+        <legend>Enemy Targets</legend>
+        <h2 aria-hidden="true">Enemy Targets</h2>
+        <label for="trolls">
+          <img src="./images/trolls.webp" alt="trolls">
+          <input type="checkbox" data-combat-style="enemy-melee" id="trolls">
+          Trolls
+        </label>
+        <label for="dragons">
+          <img src="./images/dragons.webp" alt="dragons">
+          <input type="checkbox" data-combat-style="enemy-ranged" id="dragons">
+          Dragons
+        </label>
+        <label for="dark-wizards">
+          <img src="./images/dark-wizards.webp" alt="dark-wizards">
+          <input type="checkbox" data-combat-style="enemy-ranged" id="dark-wizards">
+          Dark Wizards
+        </label>
+        <label for="goblins">
+          <img src="./images/goblins.webp" alt="goblins">
+          <input type="checkbox" data-combat-style="enemy-melee" id="goblins">
+          Goblins
+        </label>
+        <label for="undead">
+          <img src="./images/undead.webp" alt="undead">
+          <input type="checkbox" data-combat-style="enemy-melee" id="undead">
+          Undead
+        </label>
+        <label for="faeries">
+          <img src="./images/faeries.webp" alt="faeries">
+          <input type="checkbox" data-combat-style="enemy-ranged" id="faeries">
+          Mischievous Faeries
+        </label>
+        <label for="giants">
+          <img src="./images/giants.webp" alt="giants">
+          <input type="checkbox" data-combat-style="enemy-melee" id="giants">
+          Giants
+        </label>
+        <label for="vampires">
+          <img src="./images/vampires.webp" alt="vampires">
+          <input type="checkbox" data-combat-style="enemy-melee" id="vampires">
+          Vampires
+        </label>
+      </fieldset>
+    </form>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
